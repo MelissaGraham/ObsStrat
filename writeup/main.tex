@@ -1,5 +1,7 @@
 \batchmode
-\documentclass[a4paper,10pt]{article}
+\documentclass[modern]{lsstdescnote}
+%%\documentclass[modern,skiphelvet]{lsstdescnote}
+\usepackage{lsstdesc_macros}
 \usepackage{graphicx}
 \usepackage{fancyvrb}
 \usepackage{color}
@@ -29,18 +31,12 @@
 \DeclareSIUnit\arcsec{arcsec}
 \DeclareSIUnit\deg{deg}
 
+%% Use TeX's Palatino clone
+%% \usepackage{tgpagella}
+%% \usepackage[T1]{fontenc}
+%% \normalfont
 
 \definecolor{gruen}{cmyk}{0.35,0.01,0.80,0.1}
-
-\textheight=25.5cm
-\textwidth=17.5cm
-\voffset=0.cm
-\hoffset=-0.0cm
-\oddsidemargin -1cm
-\evensidemargin -1cm
-\topmargin -2cm
-\baselineskip=0.900cm
-\setlength{\parindent}{0in}
 
 \graphicspath{{figures/}}
 
@@ -52,17 +48,15 @@
 % used in SL section
 \newcommand{\todo}[2]{\textcolor{red}{\textbf{TODO (#1): #2}}}
 
-\title{Observing Strategy Task Force Write up}
-\author{}
-\date{}
-
-
 \begin{document}
+\title{LSST DESC Observing Strategy}
+\author{Members of the LSST DESC Observing Strategy Taskforce}
+\date{\today}
 \maketitle
 
-\input{cl}
 \input{dm}
 \input{gw}
+\input{gw_too}
 \input{lss}
 \input{pz}
 \input{sl}
